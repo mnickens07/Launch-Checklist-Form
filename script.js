@@ -38,7 +38,8 @@ window.addEventListener("load", function() {
             }
             if(fuelLevel.value>10000 && cargoMass.value<10000){
                document.getElementById("launchStatus").style.color="green";
-               document.getElementById("launchStatus").innerHTML="Shuttle is ready for launch";               
+               document.getElementById("launchStatus").innerHTML="Shuttle is ready for launch";   
+               event.preventDefault();              
             }
         });
     fetch("https://handlers.education.launchcode.org/static/planets.json").then(function(response){
